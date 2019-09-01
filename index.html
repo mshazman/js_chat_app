@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Chat APP</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div id="login">
+            <h3>Login To Start Chat</h3>
+            <form action="index.html">
+                <input type="text" placeholder="Type Your Name here" id='name' required><br>
+                <button type="button" name="submit" id="submit-name">Login</button>
+            </form>
+        </div>
+        <div id="channel-area">
+            <div>
+                <div id="search">
+                    
+                    <input type='text' id="add-channel-input" placeholder="   Add Channel">
+                    <button type="button" id="add-channel">Add</button>
+                </div>
+                <div id="list-container">
+                    <ul id="channel-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="chat-area">
+
+            <div>
+                <h2 id="chat-area-head">Channel 2</h2>
+                <p id="welcome-msg">Welcome Guest</p>
+                <ul id="messages-box">
+                    <li>Hello</li>
+                </ul>
+                <form action="">
+                    <textarea name="message" id="message" cols="50" rows="4" placeholder="Enter Your Message"
+                        required></textarea>
+                    <button type="button" id="send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+    <script>
+
+            // Enable pusher logging - don't include this in production
+            Pusher.logToConsole = true;
+        
+            var pusher = new Pusher('8aebf1855ad8d715daff', {
+              cluster: 'ap2',
+              forceTLS: true
+            });
+        
+            var channel = pusher.subscribe('messages');
+            channel.bind('message-added', function(data) {
+              retriveMessage(data.channel_id);
+            });
+    </script>
+</body>
+
+</html>

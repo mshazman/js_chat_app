@@ -1,0 +1,157 @@
+body{
+    background-color: #8086D8;
+}
+.container{
+    width:70%;
+    height:90vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-top:30px;
+}
+.container div{
+   
+    
+    border-radius:20px;
+}
+
+
+#channel-area{
+    display:none;
+    width:35%;
+    height: 100%;
+    background-color: #52738A;
+}
+#list-container{
+    height: 77vh;
+    overflow:auto;
+    width:100%;
+    border-radius: 20px;
+    
+}
+#channel-area div ul{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+#channel-area li{
+    display: block;
+    height:60px;
+    width:100%;
+}
+#channel-area a{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    line-height: 60px;
+    margin-left:20px;
+}
+#search{
+    padding: 20px 20px 20px 0;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+#search input{
+    background-color: #394F5F;
+    border:0;
+    border-radius: 10px;
+    
+    margin-left:20px;
+    height:30px;
+    
+}
+#chat-area h2{
+    display: block;
+    color: white;
+    background-color: #4C5581;
+    margin-top:0;
+    border-radius:20px;
+    height:40px;
+    padding: 20px;
+}
+#chat-area{
+    display:none;
+    width: 60%;
+    height:100%;
+    background-color: #4E5885;
+}
+
+#chat-area div{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+#chat-area p{
+    color:white;
+    margin: auto;
+    display: block;
+    margin-top:0;
+}
+#chat-area ul{
+    display: block;
+    flex:1;
+    padding: 0;
+    margin:0;
+    list-style: none;
+    overflow: auto;
+}
+#chat-area li{
+    
+    margin-bottom: 20px;
+    margin-left:20px;
+    border-radius:6px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+}
+#chat-area li span{
+    
+    color: black;
+}
+
+#message{
+    border-radius:5px;
+    margin:10px;
+    margin-left:20px;
+}
+
+#chat-area form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#chat-area button{
+    height:40px;
+    width:100px;
+    overflow: auto;
+}
+#login {
+    display: block;
+   padding:30px;
+   width:40%;
+    background-color: lightgray;
+
+}
+#login button, input{
+    display: block;
+    margin:auto;
+}
+#login input{
+    height: 24px;
+    width: 80%;
+    border: 0;
+    border-bottom:1px solid black;;
+    background-color: transparent;
+}
+#login h3{
+    text-align:center;
+}
+
+
